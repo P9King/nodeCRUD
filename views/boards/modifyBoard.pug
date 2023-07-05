@@ -1,0 +1,16 @@
+extends ../layouts/headerFooter
+
+block content
+    body
+        div.container
+            div.card
+                form#boardForm(action="/modifiedBoard/"+`${boardInfo.id}`, method="post" enctype="multipart/form-data") 
+                    div.cardHeader
+                        input.card-title(type="text" name="title" value=`${boardInfo.title}`)
+                        input(type="hidden", name="writer" value=`${boardInfo.writer}`)
+
+                    input.card-img-top(type="file" name="file" placeholder="files" multiple)
+                    div.card-body
+                        textarea(name="content", cols="30", rows="10") #{boardInfo.content}
+                        button.button(type="submit") modify
+                    

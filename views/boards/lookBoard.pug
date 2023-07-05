@@ -1,0 +1,24 @@
+extends ../layouts/headerFooter
+
+block content
+    body
+        div.container
+            div.card 
+                div.cardHeader
+                    h1 #{boardInfo.title} 
+                    input(type="hidden", name="boardId", value=`${boardInfo.id}`)
+                img.card-img-top(src="#")
+                div.card-body
+                    h2 #{boardInfo.content}
+                div.card-footer
+                    h4.footInfo written by : #{boardInfo.writer}
+                    input(type="hidden", name="writerId", value=`${boardInfo.writer}`)
+                    span
+                        button.likeBtn like       
+            div.btnDiv
+                    button.modifyBtn modify
+                    button.deleteBtn delete 
+        
+
+
+        script(src="/javascripts/boards/lookBoard.js")

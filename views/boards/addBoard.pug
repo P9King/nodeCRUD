@@ -1,0 +1,15 @@
+extends ../layouts/headerFooter
+
+block content
+    body
+        div.container
+            div.card
+                form#boardForm(action="/addBoard", method="post" enctype="multipart/form-data") 
+                    div.cardHeader
+                        input.card-title(type="text" name="title" placeholder="title")
+
+
+                    input.card-img-top(type="file" name="file" placeholder="files" multiple)
+                    div.card-body
+                        textarea(name="content", cols="30", rows="10" placeholder="content") 
+                        button.button(type="submit") POST

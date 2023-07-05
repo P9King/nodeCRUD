@@ -1,0 +1,20 @@
+extends layouts/headerFooter
+
+block content
+    body
+        div.container
+            each list, i in result
+                div.card
+                    div.cardHeader
+                        input(class="boardId" type="text" value=`${list.id}`
+                        readonly style="width: 38px;, cursor: pointer;" onclick="getId(event)") 
+                        span.cardTitle card-title #{list.title}
+                        
+                    div.card-body
+                        h2 #{list.content}
+                    div.card-footer
+                        h4.footInfo writer : #{list.writer}
+                        span
+                            button.likeBtn like #{list.likes}
+
+        script(src="/javascripts/main.js")

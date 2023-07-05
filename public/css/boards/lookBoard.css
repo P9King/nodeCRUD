@@ -1,0 +1,28 @@
+.likeBtn{
+    margin: 0 15px;
+    border-radius: 25px;
+    
+}
+
+.likeBtn.active{
+    color: red;
+    margin: 0 15px;
+    border-radius: 25px;
+}
+
+.btnDiv{
+    width: 1000px;
+    display: flex;
+    justify-content: left;
+
+}
+.modifyBtn{
+    font-size: 15px;
+    width: 118px;
+    background-color: green;
+}
+.deleteBtn{
+    font-size: 15px;
+    width: 118px;
+    background-color: red;
+}

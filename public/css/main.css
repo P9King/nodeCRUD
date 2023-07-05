@@ -1,0 +1,37 @@
+.card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footInfo{
+    margin: 15px;
+}
+.likeBtn{
+    margin: 0 15px;
+    border-radius: 25px;
+    
+}
+
+.card-title{
+    margin: 0 15px;
+}
+
+.card{
+    margin: 20px 0;
+    width: 1000px;
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* it is not work, idk why */
+.boardId{
+    width:38px;
+    cursor: pointer;
+}
+.cardTitle{
+    font-size: 35px;
+}
