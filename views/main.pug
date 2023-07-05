@@ -6,8 +6,11 @@ block content
             each list, i in result
                 div.card
                     div.cardHeader
-                        input(class="boardId" type="text" value=`${list.id}`
-                        readonly style="width: 38px;, cursor: pointer;" onclick="getId(event)") 
+                        div.goToBoard(style="display: flex;")
+                            input(class="boardId" type="text" value=`${list.id}`
+                            readonly style="width: 38px;, cursor: pointer;" onclick="getId(event)")
+                            span <= click to show
+                            
                         span.cardTitle card-title #{list.title}
                         
                     div.card-body
